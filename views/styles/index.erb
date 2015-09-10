@@ -1,0 +1,32 @@
+<h2>Styles</h2>
+
+<a class="btn" href="/styles/new">Add Artist</a>
+
+<div class="styles">
+  <% @styles.each do |style| %>
+  <div class="row">
+    <img src="<%= style.photo_url %>" alt="<%= style.name %> photo">
+    <ul>
+      <li>
+        <h2>
+          <a href="/styles/<%= style.id %>">
+            <%= style.name %>
+          </a>
+        </h2>
+      </li>
+      <li>
+        <a href="/styles/<%= style.id %>/edit">
+          Edit
+        </a>
+      </li>
+      <li>
+        <li>
+          <form method="/styles/<%= style.id %>/delete" action="post">
+            <button>Delete</button>
+          </form>
+        </li>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+</div>

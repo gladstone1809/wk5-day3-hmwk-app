@@ -1,0 +1,14 @@
+<h2>Edit Style</h2>
+
+<form action='/styles/<%= "#{@style.id}" %>' method="post">
+  <label for="style[name]">Name:</label>
+  <input name="style[name]" value='<%= "#{@style.name}" %>'>
+
+  <label for="style[photo_url]">Photo URL:</label>
+  <input name="style[photo_url]" value='<%= "#{@style.photo_url}" %>'>
+
+  <label for="style[description]">Description:</label>
+  <input name="style[description]" value='<%= "#{@style.description}" %>'>
+
+  <input type="submit" value="Create">
+</form>
